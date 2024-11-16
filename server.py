@@ -1,20 +1,20 @@
-import subprocess # Importamos la librería subprocess para ejecutar comandos en la terminal
-from pathlib import Path # Importamos la librería Path para manejar rutas de archivos
-from typing import Optional # Importamos la librería Optional para tipos de datos opcionales
-from yt_dlp import YoutubeDL # Importamos la librería YoutubeDL para descargar videos de YouTube
-from pydub import AudioSegment # Importamos la librería AudioSegment para manipular archivos de audio
-import librosa # Importamos la librería librosa para procesamiento de audio
-import soundfile as sf # Importamos la librería soundfile para leer y escribir archivos de audio
-import sys # Importamos la librería sys para salir del programa
+import subprocess 
+from pathlib import Path 
+from typing import Optional 
+from yt_dlp import YoutubeDL 
+from pydub import AudioSegment 
+import librosa 
+import soundfile as sf 
+import sys
 
-DOWNLOAD_DIR = Path.home() / "Downloads" # Directorio de descargas del usuario
-DOWNLOAD_DIR.mkdir(exist_ok=True) #
+DOWNLOAD_DIR = Path.home() / "Downloads" 
+DOWNLOAD_DIR.mkdir(exist_ok=True) 
 
-AUDIO_FORMATS = [".wav", ".mp3"] # Formatos de audio soportados
-FFMPEG_CODEC = "wav" # Códec de audio para descargar de YouTube
-FFMPEG_QUALITY = "320" # Calidad de audio para descargar de YouTube
-DEMUCS_MODEL = "htdemucs" # Modelo de Demucs para separación de audio
-DEMUCS_DEVICE = "cpu" # Dispositivo para ejecutar Demucs
+AUDIO_FORMATS = [".wav", ".mp3"] 
+FFMPEG_CODEC = "wav" 
+FFMPEG_QUALITY = "320"
+DEMUCS_MODEL = "htdemucs" 
+DEMUCS_DEVICE = "cpu"
 
 def download_audio_from_youtube(url: str, output_dir: Path = DOWNLOAD_DIR) -> Optional[Path]: # Función para descargar audio de YouTube
     ydl_opts = {
