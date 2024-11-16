@@ -5,7 +5,7 @@ from yt_dlp import YoutubeDL
 from pydub import AudioSegment 
 import librosa 
 import soundfile as sf 
-import sys
+import sys 
 
 DOWNLOAD_DIR = Path.home() / "Downloads" 
 DOWNLOAD_DIR.mkdir(exist_ok=True) 
@@ -90,45 +90,6 @@ def separate_audio(input_file: Path, output_dir: Path = DOWNLOAD_DIR): # Funció
     except subprocess.CalledProcessError as e: # Capturamos errores
         print(f"Error al separar el audio: {e}")
 
-def main(): # Función principal
-    print("Bienvenido al separador de audio.")
-    while True:
-        choice = input("Seleccione una opción:\n1. Descargar música desde YouTube\n2. Usar un archivo de audio local\n3. Salir\nIngrese 1, 2 o 3: ").strip()
-        input_file = None
-        try:
-            if choice == "1":
-                url = input("Ingrese la URL del video de YouTube: ").strip()
-                input_file = download_audio_from_youtube(url)
-                if not input_file:
-                    print("Error al descargar el archivo de YouTube.")
-                    continue
-            elif choice == "2":
-                input_file = select_local_audio_file()
-                if not input_file:
-                    print("Error al seleccionar el archivo local.")
-                    continue
-            elif choice == "3":
-                print("Saliendo del programa.")
-                break
-            else:
-                print("Opción no válida.")
-                continue
-
-            split_choice = input("¿Desea dividir la canción? (s/n): ").strip().lower()
-            if split_choice == 's':
-                separate_audio(input_file)
-                print("Proceso finalizado. ¡Disfruta de tus pistas separadas!")
-            else:
-                print("Operación completada sin dividir.")
-        except KeyboardInterrupt:
-            print("\nProceso interrumpido por el usuario.")
-            break
-
-        exit_choice = input("¿Desea realizar otra operación? (s/n): ").strip().lower()
-        if exit_choice != 's':
-            print("Saliendo del programa.")
-            break
-    sys.exit(0)
 
 if __name__ == "__main__": # Si el script se ejecuta directamente
     main() # Llamamos a la función principal
