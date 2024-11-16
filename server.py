@@ -91,8 +91,8 @@ def separate_audio(input_file: Path, output_dir: Path = DOWNLOAD_DIR): # Funció
         print(f"Error al separar el audio: {e}")
 
 def main(): # Función principal
+    print("Bienvenido al separador de audio.")
     while True:
-        print("Bienvenido al separador de audio.")
         choice = input("Seleccione una opción:\n1. Descargar música desde YouTube\n2. Usar un archivo de audio local\n3. Salir\nIngrese 1, 2 o 3: ").strip()
         input_file = None
         try:
@@ -122,11 +122,13 @@ def main(): # Función principal
                 print("Operación completada sin dividir.")
         except KeyboardInterrupt:
             print("\nProceso interrumpido por el usuario.")
-        finally:
-            exit_choice = input("¿Desea realizar otra operación? (s/n): ").strip().lower()
-            if exit_choice != 's':
-                print("Saliendo del programa.")
-                sys.exit(0)
+            break
+
+        exit_choice = input("¿Desea realizar otra operación? (s/n): ").strip().lower()
+        if exit_choice != 's':
+            print("Saliendo del programa.")
+            break
+    sys.exit(0)
 
 if __name__ == "__main__": # Si el script se ejecuta directamente
     main() # Llamamos a la función principal
