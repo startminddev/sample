@@ -4,12 +4,8 @@ Esta aplicación permite descargar música desde YouTube, seleccionar archivos d
 
 ## Requisitos
 
-- Python 3.6 o superior
-- ffmpeg
+- Python 3.10
 - yt-dlp
-- pydub
-- librosa
-- soundfile
 - Demucs
 
 ## Instalación
@@ -17,8 +13,8 @@ Esta aplicación permite descargar música desde YouTube, seleccionar archivos d
 1. Clona este repositorio:
 
     ```sh
-    git clone https://github.com/tu_usuario/separador-audio.git
-    cd separador-audio
+    git clone https://github.com/tu_usuario/sample.git
+    cd sample
     ```
 
 2. Instala las dependencias:
@@ -27,9 +23,7 @@ Esta aplicación permite descargar música desde YouTube, seleccionar archivos d
     pip install -r requirements.txt
     ```
 
-3. Asegúrate de tener `ffmpeg` instalado en tu sistema. Puedes descargarlo desde [aquí](https://ffmpeg.org/download.html).
-
-4. Instala Demucs siguiendo las instrucciones en su [repositorio oficial](https://github.com/facebookresearch/demucs).
+3. Instala Demucs siguiendo las instrucciones en su [repositorio oficial](https://github.com/facebookresearch/demucs).
 
 ## Uso
 
