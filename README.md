@@ -13,7 +13,7 @@ Esta aplicación permite descargar música desde YouTube, seleccionar archivos d
 1. Clona este repositorio:
 
     ```sh
-    git clone https://github.com/startminddev/sample.git
+    git clone https://github.com/tu_usuario/sample.git
     cd sample
     ```
 
@@ -24,6 +24,12 @@ Esta aplicación permite descargar música desde YouTube, seleccionar archivos d
     ```
 
 3. Instala Demucs siguiendo las instrucciones en su [repositorio oficial](https://github.com/facebookresearch/demucs).
+
+4. Instala python y git con: 
+
+    ```sh
+    brew update && brew install python@3.10 && brew install git
+    ```
 
 ## Uso
 
