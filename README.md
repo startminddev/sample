@@ -13,7 +13,7 @@ Esta aplicación permite descargar música desde YouTube, seleccionar archivos d
 1. Clona este repositorio:
 
     ```sh
-    git clone https://github.com/tu_usuario/sample.git
+    git clone https://github.com/startminddev/sample.git
     cd sample
     ```
 
