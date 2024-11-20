@@ -10,22 +10,20 @@ Esta aplicación te permite descargar música desde YouTube, optimizar la calida
 
 ## Instalación
 
-1. Instala python y git con: 
+1. Instala python, git, pip y las dependencias necesarias con el siguiente comando (haz copiar y pegar en la terminal): 
 
     ```sh
     brew update && brew install python@3.10 && brew install git && python -m ensurepip --upgrade && brew install ffmpeg && pip install yt-dlp && pip install demucs
     ```
 
-2. Clona este repositorio:
+2. Clona este repositorio (Haz copiar y pegar en la terminal):
 
     ```sh
     git clone https://github.com/startminddev/sample.git
     cd sample
     ```
 
-## Uso
-
-Ejecuta en la consola el script con:
+3. Ejecuta en la consola el script con:
 
 ```sh
 python server.py
