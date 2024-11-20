@@ -37,7 +37,7 @@ Esta aplicación te permite descargar música desde YouTube, optimizar la calida
 
 ## Uso
 
-Ejecuta el script `server.py`:
+Ejecuta en la consola el script con ``:
 
 ```sh
-python [server.py](http://_vscodecontentref_/2)
+server.py
