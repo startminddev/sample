@@ -23,15 +23,6 @@ Esta aplicación te permite descargar música desde YouTube, optimizar la calida
     cd sample
     ```
 
-3. Instala las dependencias:
-
-    ```sh
-    pip install -r requirements.txt
-    ```
-
-4. Instala Demucs siguiendo las instrucciones en su [repositorio oficial](https://github.com/facebookresearch/demucs).
-
-
 ## Uso
 
 Ejecuta en la consola el script con:
