@@ -13,10 +13,7 @@ Esta aplicación te permite descargar música desde YouTube, optimizar la calida
 1. Instala python y git con: 
 
     ```sh
-    brew update && brew install python@3.10 && brew install git && python -m ensurepip --upgrade
-    brew install ffmpeg
-    pip install yt-dlp
-    pip install demucs
+    brew update && brew install python@3.10 && brew install git && python -m ensurepip --upgrade && brew install ffmpeg && pip install yt-dlp && pip install demucs
     ```
 
 2. Clona este repositorio:
@@ -41,3 +38,4 @@ Ejecuta en la consola el script con:
 
 ```sh
 python server.py
+```
