@@ -33,12 +33,11 @@ def download_audio_from_youtube(url: str, output_dir: Path = DOWNLOAD_DIR) -> Op
 
 def enhance_audio_quality(file: Path):
     try:
-        # Lógica para mejorar la calidad del audio
         pass
     except Exception as e:
         print(f"Error al mejorar la calidad del audio: {e}")
 
-def separate_audio(input_file: Path, output_dir: Path = DOWNLOAD_DIR): # Función para separar el audio
+def separate_audio(input_file: Path, output_dir: Path = DOWNLOAD_DIR):
     print("Separando audio en componentes con Demucs...")
     command = [ 
         'demucs', 
@@ -47,12 +46,12 @@ def separate_audio(input_file: Path, output_dir: Path = DOWNLOAD_DIR): # Funció
         '-n', DEMUCS_MODEL,
         str(input_file)
     ]
-    try: # Ejecutamos el comando en la terminal
+    try: 
         subprocess.run(command, check=True)
         print("Separación completa. Archivos guardados en el directorio de descargas.")
-        for file in output_dir.glob(f"{DEMUCS_MODEL}/*/*.wav"): # Iteramos sobre los archivos separados
-            enhance_audio_quality(file) # Mejoramos la calidad del audio
-    except subprocess.CalledProcessError as e: # Capturamos errores
+        for file in output_dir.glob(f"{DEMUCS_MODEL}/*/*.wav"): 
+            enhance_audio_quality(file) 
+    except subprocess.CalledProcessError as e:
         print(f"Error al separar el audio: {e}")
 
 def main():
